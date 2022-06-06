@@ -93,13 +93,13 @@ function map_symbol() {
       tooltip
         .style("opacity", 1)
         .html("<table>" + "<thead>" + "<tr>" + 
-        "<th>Lieu :</th>" + 
-        "<th>population</th>" + 
-        "<th>% vacance</th>" + 
-        "<th>Nombre logements</th>" + 
+        "<th>Secteur éco</th>" + 
+        "<th>Entreprise</th>" + 
+        "<th>ID Refinitiv</th>" + 
+        "<th>Siège social</th>" + 
         "</tr>" + "</thead>" + 
         "<tbody>" + "<tr>" + 
-        "<td>" + d.Compagny + "</td>" + "<td>" + d.Compagny + "</td>" + "<td>" + d.Numeric_code + "</td>" + "<td>" + d.ADDRESSCITY + "</td>" + "</tr>" + "</tbody>" + "</table>")
+        "<td>" + d.Description_5 + "</td>" + "<td>" + d.Compagny + "</td>" + "<td>" + d.Numeric_code + "</td>" + "<td>" + d.ADDRESSCITY + "</td>" + "</tr>" + "</tbody>" + "</table>")
         //"Il s'agit de la ville de : " + d.name + )
         .style("left", (d3.mouse(this)[0] + 30) + "px")
         .style("top", (d3.mouse(this)[1] + 30) + "px")
