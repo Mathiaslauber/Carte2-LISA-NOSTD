@@ -465,8 +465,10 @@ function map_symbol() {
        .append('rect')
        //.attr('x', 100)
        //.attr('y', 120)
-       .attr("x", offsett_X)
-       .attr("y", offsett_Y_child)
+       .attr("x", -100)
+       .attr("y", 350)
+       //.attr("x", offsett_X + (size_lisa + spacing))
+       //.attr("y", -offsett_Y)
        .attr('width', size_lisa)
        .attr('height', size_lisa)
        .attr('stroke', 'black')
@@ -586,6 +588,13 @@ function map_symbol() {
       .style("font-size", "14px")
       .attr("alignment-baseline", "middle")
 
+      // Sous-titre de la légende
+      svg_chorop.append("text")
+      .attr("x", 200).attr("y", 275)
+      .text("NS")
+      .style("fill", colorlegend)
+      .style("font-size", "14px")
+      .attr("alignment-baseline", "middle")
       // Sous-titre de la légende
       svg_chorop.append("text")
       .attr("x", 200).attr("y", 60)
