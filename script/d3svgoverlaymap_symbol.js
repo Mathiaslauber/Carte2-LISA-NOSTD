@@ -79,10 +79,11 @@ function map_symbol() {
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip_map")
-      .style("background-color", "#bdc2ca")
+      .style("color", "#fcfcfc")
+      .style("background-color", "#d8d8d8")
       .style("border-radius", "5px")
       .style("padding", "10px")
-      .style("color", "white")
+      
   
   
     // -2- Create 3 functions to show / update (when mouse move but stay on same circle) / hide the tooltip
@@ -94,12 +95,11 @@ function map_symbol() {
         .style("opacity", 1)
         .html("<table>" + "<thead>" + "<tr>" + 
         "<th>Secteur éco</th>" + 
-        "<th>Entreprise</th>" + 
         "<th>ID Refinitiv</th>" + 
         "<th>Siège social</th>" + 
         "</tr>" + "</thead>" + 
         "<tbody>" + "<tr>" + 
-        "<td>" + d.Description_5 + "</td>" + "<td>" + d.Compagny + "</td>" + "<td>" + d.Numeric_code + "</td>" + "<td>" + d.ADDRESSCITY + "</td>" + "</tr>" + "</tbody>" + "</table>")
+        "<td>" + d.Description_5 + "</td>" + "<td>" + d.Numeric_code + "</td>" + "<td>" + d.ADDRESSCITY + "</td>" + "</tr>" + "</tbody>" + "</table>")
         //"Il s'agit de la ville de : " + d.name + )
         .style("left", (d3.mouse(this)[0] + 30) + "px")
         .style("top", (d3.mouse(this)[1] + 30) + "px")
@@ -580,13 +580,6 @@ function map_symbol() {
       .text(function(d) {
         return '\uf8cc'
       })
-      // Sous-titre de la légende
-      svg_chorop.append("text")
-      .attr("x", 0).attr("y", 50)
-      .text("moyenne entre 2014-2019")
-      .style("fill", colorlegend)
-      .style("font-size", "14px")
-      .attr("alignment-baseline", "middle")
 
       // Sous-titre de la légende
       svg_chorop.append("text")
